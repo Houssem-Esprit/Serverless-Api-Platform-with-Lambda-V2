@@ -1,0 +1,3 @@
+framework:
+  assets:
+    base_urls: "https://serverless-houssem-assets.s3.amazonaws.com"
