@@ -181,18 +181,13 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-houssem/prod/1629543306631-2021-08-21T10:55:06.631Z/serverless-houssem.zip"
+          "S3Key": "serverless/serverless-houssem/prod/1630013527447-2021-08-26T21:32:07.447Z/serverless-houssem.zip"
         },
         "Handler": "public/index.php",
         "Runtime": "provided.al2",
         "FunctionName": "serverless-houssem-prod-web_api",
         "MemorySize": 1024,
         "Timeout": 28,
-        "Environment": {
-          "Variables": {
-            "APP_ENV": "prod"
-          }
-        },
         "Role": {
           "Fn::GetAtt": [
             "IamRoleLambdaExecution",
@@ -227,18 +222,13 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-houssem/prod/1629543306631-2021-08-21T10:55:06.631Z/serverless-houssem.zip"
+          "S3Key": "serverless/serverless-houssem/prod/1630013527447-2021-08-26T21:32:07.447Z/serverless-houssem.zip"
         },
         "Handler": "bin/console",
         "Runtime": "provided.al2",
         "FunctionName": "serverless-houssem-prod-console",
         "MemorySize": 1024,
         "Timeout": 120,
-        "Environment": {
-          "Variables": {
-            "APP_ENV": "prod"
-          }
-        },
         "Role": {
           "Fn::GetAtt": [
             "IamRoleLambdaExecution",
@@ -267,24 +257,24 @@
         "ConsoleLogGroup"
       ]
     },
-    "WebUnderscoreapiLambdaVersion7GHleosws1XuRrjLajMdIpnKcBy03eAMoY2OB76uuw": {
+    "WebUnderscoreapiLambdaVersionait3zpW4LMicK0PTvA9NEfQffGBuKwmqYSUOw3jUHM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "WebUnderscoreapiLambdaFunction"
         },
-        "CodeSha256": "5fy6trvz7SvhJG6+hNcUpWg+BgWOaiaaAyCq4GkOf1w="
+        "CodeSha256": "KfBceAIpxVpxWWzLIomj7m4CUdbAa9RRMEHvVmBGLR0="
       }
     },
-    "ConsoleLambdaVersionHkPFt6TMTWDaprrwdwXvp03bkLlX87rSdo7WFq32w": {
+    "ConsoleLambdaVersionoNvjgRZz0ux9lIvOXDo3wGixlPnhRXBSAAk07B9aM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ConsoleLambdaFunction"
         },
-        "CodeSha256": "5fy6trvz7SvhJG6+hNcUpWg+BgWOaiaaAyCq4GkOf1w="
+        "CodeSha256": "KfBceAIpxVpxWWzLIomj7m4CUdbAa9RRMEHvVmBGLR0="
       }
     },
     "HttpApi": {
@@ -432,7 +422,7 @@
     "WebUnderscoreapiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "WebUnderscoreapiLambdaVersion7GHleosws1XuRrjLajMdIpnKcBy03eAMoY2OB76uuw"
+        "Ref": "WebUnderscoreapiLambdaVersionait3zpW4LMicK0PTvA9NEfQffGBuKwmqYSUOw3jUHM"
       },
       "Export": {
         "Name": "sls-serverless-houssem-prod-WebUnderscoreapiLambdaFunctionQualifiedArn"
@@ -441,7 +431,7 @@
     "ConsoleLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ConsoleLambdaVersionHkPFt6TMTWDaprrwdwXvp03bkLlX87rSdo7WFq32w"
+        "Ref": "ConsoleLambdaVersionoNvjgRZz0ux9lIvOXDo3wGixlPnhRXBSAAk07B9aM"
       },
       "Export": {
         "Name": "sls-serverless-houssem-prod-ConsoleLambdaFunctionQualifiedArn"

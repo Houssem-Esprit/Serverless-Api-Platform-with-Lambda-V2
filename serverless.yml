@@ -10,7 +10,14 @@ provider:
   runtime: provided.al2
   environment:
     # Symfony environment variables
-    APP_ENV: prod
+  #httpApi:
+  #authorizers:
+  #transferJwtAuthorizer:
+  #type: jwt
+  #identitySource: $request.header.Authorization
+  #issuerUrl: https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_jtnP7zFws
+  #audience:
+  #- 35lnq2f23895ihrnnj6kof4058
 
 plugins:
   - ./vendor/bref/bref
@@ -24,6 +31,12 @@ functions:
       - ${bref:layer.php-74-fpm}
     events:
       - httpApi: "*"
+          #method: GET
+          #path: /api/transfers
+          #authorizer:
+          #name: transferJwtAuthorizer
+          #scopes: # Optional
+          #- serverlessbackend.com/transfers.read
     vpc:
       securityGroupIds:
         - sg-eb16dbf2
@@ -57,6 +70,7 @@ package:
     - "!assets/**"
     - "!public/build/**"
     - "!.env.local"
+    - "!docker-compose.yml"
     - "!public/bundles/**"
     - "public/build/manifest.json"
     - "public/build/entrypoint.json"
