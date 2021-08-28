@@ -192,6 +192,9 @@
     "riverline/multipart-parser": {
         "version": "2.0.8"
     },
+    "stripe/stripe-php": {
+        "version": "v7.94.0"
+    },
     "symfony/asset": {
         "version": "v5.3.4"
     },
